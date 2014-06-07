@@ -8,12 +8,17 @@ class Account < ActiveRecord::Base
   
   validates :email, :encrypted_password, :account_type_master_id, :presence => true
   validates :account_type_master_id, :inclusion => [TYPE_ADMIN, TYPE_USER]
+  before_validation :sign_up_as_user
   
   def is_admin?
     self.account_type_master_id == 1
   end
   def is_user?
     self.account_type_master_id == 2
+  end
+  
+  def sign_up_as_user
+    self.account_type_master_id = 2
   end
 
   def self.find_for_facebook_oauth(auth)
