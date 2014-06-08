@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140607150125) do
+ActiveRecord::Schema.define(version: 20140608051417) do
 
   create_table "accounts", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -24,6 +24,9 @@ ActiveRecord::Schema.define(version: 20140607150125) do
     t.datetime "updated_at"
     t.string   "provider"
     t.string   "uid"
+    t.string   "image"
+    t.string   "name"
+    t.string   "top_image"
   end
 
   create_table "posts", force: true do |t|
@@ -38,17 +41,6 @@ ActiveRecord::Schema.define(version: 20140607150125) do
     t.text     "preview_img"
     t.integer  "access",       default: 0, null: false
     t.integer  "recommend",    default: 0, null: false
-  end
-
-  create_table "posts_bk", force: true do |t|
-    t.string   "title"
-    t.text     "content"
-    t.text     "thumbnail"
-    t.integer  "created_by"
-    t.integer  "updated_by"
-    t.integer  "lock_version", default: 0, null: false
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
   end
 
 end

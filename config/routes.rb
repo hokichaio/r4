@@ -1,7 +1,8 @@
 R4::Application.routes.draw do
   
   devise_for :accounts, :controllers => { :omniauth_callbacks => "omniauth_callbacks" }
-  root :controller => :posts, :action => :index
+  root :controller => :main, :action => :index
+  resources :accounts, :only => [:index, :show], constraints: { format: 'json' }
   resources :posts
   resources :upload, :only => [:new, :create]
   resources :admin, :only => :index

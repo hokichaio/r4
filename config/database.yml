@@ -13,9 +13,9 @@ development:
   encoding: utf8
   database: dev
   pool: 5
-  username: yusuke
-  password: 0829abcd
-  host: dev.clsj2jn6wlm5.ap-northeast-1.rds.amazonaws.com
+  username: hokichaio
+  password: mongchaio
+  host: kevin-test.cb5wgkbfnfgu.ap-northeast-1.rds.amazonaws.com
   socket: /tmp/mysql.sock
 
 # Warning: The database defined as "test" will be erased and
@@ -35,7 +35,7 @@ production:
   encoding: utf8
   database: dev
   pool: 5
-  username: yusuke
-  password: 0829abcd
-  host: dev.clsj2jn6wlm5.ap-northeast-1.rds.amazonaws.com
+  username: hokichaio
+  password: mongchaio
+  host: kevin-test.cb5wgkbfnfgu.ap-northeast-1.rds.amazonaws.com
   socket: /tmp/mysql.sock

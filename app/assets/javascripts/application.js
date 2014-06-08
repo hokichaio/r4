@@ -16,3 +16,7 @@
 //= require bootstrap
 //= require ga
 //= require angular-1.3.0-beta.11/angular.min.js
+//= require angular-1.3.0-beta.11/angular-route.min.js
+//= require angular-1.3.0-beta.11/angular-resource.min.js
+//= require angular-1.3.0-beta.11/angular-deckgrid.min.js
+//= require app.js
